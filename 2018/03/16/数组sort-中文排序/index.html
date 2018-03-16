@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="sort() 方法用于对数组的元素进行排序,并返回数组。默认排序顺序是根据字符串Unicode码点。   12345678910111213var newArr = [];    newArr[0] = &#34;aa&#34;;    newArr[1] = &#34;ee&#34;;    newArr[2] = &#34;dd&#34;; " />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>数组sort()中文排序 | Web Tec</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="sort() 方法用于对数组的元素进行排序,并返回数组。默认排序顺序是根据字符串Unicode码点。   12345678910111213var newArr = [];    newArr[0] = &quot;aa&quot;;    newArr[1] = &quot;ee&quot;;    newArr[2] = &quot;dd&quot;;    newArr[3] = &quot;uu&quot;;    newArr[4] = &quot;ee&quot;;    ne">
+<meta name="keywords" content="原生js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数组sort()中文排序">
+<meta property="og:url" content="http://yoursite.com/2018/03/16/数组sort-中文排序/index.html">
+<meta property="og:site_name" content="Web Tec">
+<meta property="og:description" content="sort() 方法用于对数组的元素进行排序,并返回数组。默认排序顺序是根据字符串Unicode码点。   12345678910111213var newArr = [];    newArr[0] = &quot;aa&quot;;    newArr[1] = &quot;ee&quot;;    newArr[2] = &quot;dd&quot;;    newArr[3] = &quot;uu&quot;;    newArr[4] = &quot;ee&quot;;    ne">
+<meta property="og:updated_time" content="2018-03-16T14:27:30.756Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数组sort()中文排序">
+<meta name="twitter:description" content="sort() 方法用于对数组的元素进行排序,并返回数组。默认排序顺序是根据字符串Unicode码点。   12345678910111213var newArr = [];    newArr[0] = &quot;aa&quot;;    newArr[1] = &quot;ee&quot;;    newArr[2] = &quot;dd&quot;;    newArr[3] = &quot;uu&quot;;    newArr[4] = &quot;ee&quot;;    ne">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Web Tec" rel="home">Web Tec</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">与您共享web技术</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-数组sort-中文排序" class="post-数组sort-中文排序 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      数组sort()中文排序
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/03/16/数组sort-中文排序/" data-id="cjeu1frx30005dwhto03qda60" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>   sort() 方法用于对数组的元素进行排序,并返回数组。默认排序顺序是根据字符串Unicode码点。<br>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var newArr = [];</span><br><span class="line">    newArr[0] = <span class="string">"aa"</span>;</span><br><span class="line">    newArr[1] = <span class="string">"ee"</span>;</span><br><span class="line">    newArr[2] = <span class="string">"dd"</span>;</span><br><span class="line">    newArr[3] = <span class="string">"uu"</span>;</span><br><span class="line">    newArr[4] = <span class="string">"ee"</span>;</span><br><span class="line">    newArr[5] = <span class="string">"cc"</span>;</span><br><span class="line">    newArr[6] = <span class="string">"qq"</span>;</span><br><span class="line">    newArr[7] = <span class="string">"bb"</span>;</span><br><span class="line">    document.write(newArr+<span class="string">'&lt;/br&gt;'</span>);</span><br><span class="line">    document.write(newArr.sort() +<span class="string">'&lt;/br&gt;'</span>);</span><br><span class="line">    //aa,ee,dd,uu,ee,cc,qq,bb</span><br><span class="line">    //aa,bb,cc,dd,ee,ee,qq,uu</span><br></pre></td></tr></table></figure></p>
+<p>   语法：arrayObject.sort(sortby)；参数sortby可选。规定排序顺序。必须是函数。<br>   注：如果调用该方法时没有使用参数，将按字母顺序对数组中的元素进行排序，说得更精确点，是按照字符编码的顺序进行排序。要实现这一点，首先应把数组的元素都转换成字符串（如有必要），以便进行比较。</p>
+<p>   如果想按照其他标准进行排序，就需要提供比较函数，该函数要比较两个值，然后返回一个用于说明这两个值的相对顺序的数字。比较函数应该具有两个参数 a 和 b，其返回值如下：<br>   若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。<br>   若 a 等于 b，则返回 0。<br>   若 a 大于 b，则返回一个大于 0 的值。</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">var newBrr = [];</span><br><span class="line">    newBrr[0] = 55;</span><br><span class="line">    newBrr[1] = 5;</span><br><span class="line">    newBrr[2] = 4;</span><br><span class="line">    newBrr[3] = 45;</span><br><span class="line">    newBrr[4] = 59;</span><br><span class="line">    newBrr[5] = 15;</span><br><span class="line">    newBrr[6] = 35;</span><br><span class="line">    newBrr[7] = 75;</span><br><span class="line">    document.write(newBrr+<span class="string">'&lt;/br&gt;'</span>);</span><br><span class="line">    document.write(newBrr.sort(orderNumber) +<span class="string">'&lt;/br&gt;'</span>);</span><br><span class="line">    <span class="keyword">function</span> orderNumber(a,b) &#123;</span><br><span class="line">      <span class="keyword">if</span>(a&gt;b)&#123;</span><br><span class="line">          console.info(newBrr);</span><br><span class="line">          //<span class="built_in">return</span> 1;</span><br><span class="line">          <span class="built_in">return</span> -1;</span><br><span class="line">      &#125;<span class="keyword">else</span> <span class="keyword">if</span>(a&lt;b)&#123;</span><br><span class="line">          console.info(newBrr);</span><br><span class="line">         // <span class="built_in">return</span> -1;</span><br><span class="line">          <span class="built_in">return</span> 1;</span><br><span class="line">      &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">          console.info(newBrr);</span><br><span class="line">          <span class="built_in">return</span> 0;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    //55,5,4,45,59,15,35,75</span><br><span class="line">    //75,59,55,45,35,15,5,4  这里是倒序！</span><br></pre></td></tr></table></figure>
+<pre><code>特定顺序的汉字排序！！！
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">var arr = [</span><br><span class="line">        &#123;age:11,name:<span class="string">"好好"</span>&#125;,</span><br><span class="line">        &#123;age:11,name:<span class="string">"得到"</span>&#125;,</span><br><span class="line">        &#123;age:11,name:<span class="string">"嗯嗯"</span>&#125;,</span><br><span class="line">        &#123;age:11,name:<span class="string">"好好"</span>&#125;,</span><br><span class="line">        &#123;age:11,name:<span class="string">"哇喔"</span>&#125;,</span><br><span class="line">        &#123;age:11,name:<span class="string">"前期"</span>&#125;,</span><br><span class="line">        &#123;age:11,name:<span class="string">"刚刚"</span>&#125;</span><br><span class="line">    ];</span><br><span class="line">    <span class="keyword">for</span>(i = 0;i&lt;arr.length;i++)&#123;</span><br><span class="line">        document.write(arr[i].name+<span class="string">"&lt;br/&gt;"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    var arrComp =&#123;</span><br><span class="line">        <span class="string">"好好"</span>:4,</span><br><span class="line">        <span class="string">"得到"</span>:7,</span><br><span class="line">        <span class="string">"嗯嗯"</span>:1,</span><br><span class="line">        <span class="string">"哇喔"</span>:5,</span><br><span class="line">        <span class="string">"好好"</span>:3,</span><br><span class="line">        <span class="string">"前期"</span>:2,</span><br><span class="line">        <span class="string">"刚刚"</span>:6</span><br><span class="line">        &#125;;</span><br><span class="line">        /*我想得到：嗯嗯</span><br><span class="line">                 前期</span><br><span class="line">                 好好</span><br><span class="line">                 好好</span><br><span class="line">                 哇喔</span><br><span class="line">                 刚刚</span><br><span class="line">                 得到   这样的排序！*/</span><br><span class="line"></span><br><span class="line">    /*document.write(arr.name+<span class="string">'&lt;/br&gt;'</span>);</span><br><span class="line">    document.write(arr.sort(CompareText)+<span class="string">'&lt;/br&gt;'</span>);*/</span><br><span class="line">    var show = arr.sort(CompareText);</span><br><span class="line">    <span class="keyword">for</span>(i = 0; i &lt; show.length;i++)</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        document.write(show[i].name+<span class="string">"&lt;/br&gt;"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    /**</span><br><span class="line">     * @<span class="built_in">return</span> &#123;number&#125;</span><br><span class="line">     */</span><br><span class="line">    <span class="keyword">function</span> CompareText(a,b) &#123;</span><br><span class="line">        <span class="built_in">return</span> arrComp[a.name] - arrComp[b.name];</span><br><span class="line">    &#125;</span><br><span class="line">    /*</span><br><span class="line">    好好</span><br><span class="line">    得到</span><br><span class="line">    嗯嗯</span><br><span class="line">    好好</span><br><span class="line">    哇喔</span><br><span class="line">    前期</span><br><span class="line">    刚刚*/</span><br><span class="line">    /*</span><br><span class="line">    嗯嗯</span><br><span class="line">    前期</span><br><span class="line">    好好</span><br><span class="line">    好好</span><br><span class="line">    哇喔</span><br><span class="line">    刚刚</span><br><span class="line">    得到*/</span><br></pre></td></tr></table></figure>
+</code></pre>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/03/16/数组sort-中文排序/">
+    <time datetime="2018-03-16T14:19:17.000Z" class="entry-date">
+        2018-03-16
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原生js/">原生js</a></li></ul>
+
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2018/03/16/原生js-转换-Url/" rel="next">原生js 转换 Url <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/16/数组sort-中文排序/">数组sort()中文排序</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/16/原生js-转换-Url/">原生js 转换 Url</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/15/原生js插件/">原生js插件</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/14/Hexo-建站浅谈/">Hexo 建站浅谈</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/14/Hexo-建站详解/">Hexo 建站详解</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/原生js/">原生js</a><span class="tag-list-count">3</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/原生js/" style="font-size: 20px;">原生js</a>
+    </div>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2018 DestinyV
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
