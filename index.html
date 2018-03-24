@@ -61,6 +61,73 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="post-display属性" class="post-display属性 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2018/03/24/display属性/">display属性</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/03/24/display属性/" data-id="cjf55u8a00007bkht8nvngkbn" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="display属性值block，inline和inline-block概念和区别"><a href="#display属性值block，inline和inline-block概念和区别" class="headerlink" title="display属性值block，inline和inline-block概念和区别"></a>display属性值block，inline和inline-block概念和区别</h1><h2 id="一、总体概念"><a href="#一、总体概念" class="headerlink" title="一、总体概念"></a>一、总体概念</h2><p>1、block和inline这两个概念是简略的说法，完整确切的说应该是 block-level elements (块级元素) 和 inline elements (内联元素)。block元素通常被现实为独立的一块，会单独换一行；inline元素则前后不会产生换行，一系列inline元素都在一行内显示，直到该行排满。</p>
+<p>2、大体来说HTML元素各有其自身的布局级别（block元素还是inline元素）：</p>
+<p>常见的块级元素有 DIV, FORM, TABLE, P, PRE, H1~H6, DL, OL, UL 等。</p>
+<p>常见的内联元素有 SPAN, A, STRONG, EM, LABEL, INPUT, SELECT, TEXTAREA, IMG, BR 等。</p>
+<p>3、block元素可以包含block元素和inline元素；但inline元素只能包含inline元素。要注意的是这个是个大概的说法，每个特定的元素能包含的元素也是特定的，所以具体到个别元素上，这条规律是不适用的。比如 P 元素，只能包含inline元素，而不能包含block元素。</p>
+<p>4、一般来说，可以通过display:inline和display:block的设置，改变元素的布局级别。</p>
+<h2 id="二、block，inline和inlinke-block细节对比"><a href="#二、block，inline和inlinke-block细节对比" class="headerlink" title="二、block，inline和inlinke-block细节对比"></a>二、block，inline和inlinke-block细节对比</h2><p>display:block</p>
+<p>1、block元素会独占一行，多个block元素会各自新起一行。默认情况下，block元素宽度自动填满其父元素宽度。</p>
+<p>2、block元素可以设置width,height属性。块级元素即使设置了宽度,仍然是独占一行。</p>
+<p>3、block元素可以设置margin和padding属性。</p>
+<p>display:inline</p>
+<p>1、inline元素不会独占一行，多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行，其宽度随元素的内容而变化。</p>
+<p>2、inline元素设置width,height属性无效。</p>
+<p>3、inline元素的margin和padding属性，水平方向的padding-left, padding-right, margin-left, margin-right都产生边距效果；但竖直方向的padding-top, padding-bottom, margin-top, margin-bottom不会产生边距效果。</p>
+<p>display:inline-block</p>
+<p>简单来说就是将对象呈现为inline对象，但是对象的内容作为block对象呈现。之后的内联对象会被排列在同一行内。比如我们可以给一个link（a元素）inline-block属性值，使其既具有block的宽度高度特性又具有inline的同行特性。</p>
+<h2 id="三、补充说明"><a href="#三、补充说明" class="headerlink" title="三、补充说明"></a>三、补充说明</h2><p>1、一般我们会用display:block，display:inline或者display:inline-block来调整元素的布局级别，其实display的参数远远不止这三种，仅仅是比较常用而已。</p>
+<p>2、IE（低版本IE）本来是不支持inline-block的，所以在IE中对内联元素使用display:inline-block，理论上IE是不识别的，但使用display:inline-block在IE下会触发layout，从而使内联元素拥有了display:inline-block属性的表象。</p>
+<p>IE下块元素如何实现display:inline-block的效果，有两种方法：</p>
+<p>　　1）、先使用display:inline-block属性触发块元素，然后再定义display:inline，让块元素呈递为内联对象（两个display要先后放在两个CSS声明中才有效果，这是IE的一个经典bug，如果先定义了display:inline-block，然后再将display设回inline或block，layout不会消失）。代码如下（…为省略的其他属性内容）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">div &#123;display:inline-block;...&#125; </span><br><span class="line">　　div &#123;display:inline;&#125;</span><br></pre></td></tr></table></figure>
+<p>　　2）、直接让块元素设置为内联对象呈递（设置属性display:inline），然后触发块元素的layout（如：zoom:1等）。代码如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div &#123;display:inline; zoom:1;...&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/03/24/display属性/">
+    <time datetime="2018-03-24T09:13:44.000Z" class="entry-date">
+        2018-03-24
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="post-javaScript-跨域" class="post-javaScript-跨域 post type-post status-publish format-standard hentry">
     <!---->
 
@@ -76,7 +143,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/03/20/javaScript-跨域/" data-id="cjezj8qlt00032sht263q1bqy" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/03/20/javaScript-跨域/" data-id="cjf55u8a40009bkhtcizhwqgk" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -146,7 +213,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/03/18/CSS-伸缩布局/" data-id="cjezj8qi000002shtlw942ct4" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/03/18/CSS-伸缩布局/" data-id="cjf55u8880001bkht29yotivh" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -213,7 +280,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/03/17/Http-请求/" data-id="cjezj8qm500062shtr0ttl173" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/03/17/Http-请求/" data-id="cjf55u8aa000bbkhttevemf12" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -291,7 +358,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/03/16/数组sort-中文排序/" data-id="cjezj8qne000i2shtg7z0ez50" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/03/16/数组sort-中文排序/" data-id="cjf55u8bh000lbkhty9lhyj4u" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -343,7 +410,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/03/16/原生js-转换-Url/" data-id="cjezj8qmd00072shtgq7ompq0" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/03/16/原生js-转换-Url/" data-id="cjf55u8af000cbkht659olloy" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -395,7 +462,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/03/15/原生js插件/" data-id="cjezj8qn8000h2shtt0j2k2ds" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/03/15/原生js插件/" data-id="cjf55u8bb000kbkhttrsq42ss" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -462,7 +529,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/03/14/Hexo-建站浅谈/" data-id="cjezj8qmh00082shtbq4sgw7e" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/03/14/Hexo-建站浅谈/" data-id="cjf55u86m0000bkhtfiq70fz2" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -516,7 +583,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/03/14/Hexo-建站详解/" data-id="cjezj8qly00042shtlrkceu0f" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/03/14/Hexo-建站详解/" data-id="cjf55u89x0006bkhtoom7r0f3" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -616,6 +683,10 @@
       <ul>
         
           <li>
+            <a href="/2018/03/24/display属性/">display属性</a>
+          </li>
+        
+          <li>
             <a href="/2018/03/20/javaScript-跨域/">javaScript 跨域</a>
           </li>
         
@@ -631,10 +702,6 @@
             <a href="/2018/03/16/数组sort-中文排序/">数组sort()中文排序</a>
           </li>
         
-          <li>
-            <a href="/2018/03/16/原生js-转换-Url/">原生js 转换 Url</a>
-          </li>
-        
       </ul>
     </div>
   </aside>
@@ -644,7 +711,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-content">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/">CSS3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/">Http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/原生js/">原生js</a><span class="tag-list-count">4</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/">CSS3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/">Http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/原生js/">原生js</a><span class="tag-list-count">4</span></li></ul>
     </div>
   </aside>
 
@@ -653,7 +720,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-content tagcloud">
-      <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/Http/" style="font-size: 10px;">Http</a> <a href="/tags/原生js/" style="font-size: 20px;">原生js</a>
+      <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/Http/" style="font-size: 10px;">Http</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/原生js/" style="font-size: 20px;">原生js</a>
     </div>
   </aside>
 
