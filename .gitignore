@@ -5,3 +5,7 @@ db.json
 node_modules/
 public/
 .deploy*/
+themes/cyanstyle
+themes/lite/
+themes/ochuunn/
+themes/cyanstyle
