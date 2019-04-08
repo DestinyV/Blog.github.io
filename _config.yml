@@ -4,11 +4,11 @@
 
 # Site
 title: Web Tec 
-subtitle: 与您共享web技术
-description:
+subtitle: 与您共享javascript node.js typescript vue.js java python c... 技术
+description: javascript node.js typescript vue.js java python c... 技术分享
 author: DestinyV
-language:
-timezone:
+language: zh-cn
+timezone: GMT
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -78,6 +78,5 @@ theme: cyanstyle
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/DestinyV/Blog.github.io.git
-  branch: master
+  repo: https://github.com/DestinyV/DestinyV.github.io
   message:
