@@ -1,0 +1,165 @@
+---
+title: Hexo 建站详解
+date: 2018-03-14 20:22:00
+tags:
+- Hexo
+---
+
+# Hexo 简介
+
+Hexo 是一个快速、简洁且高效的Node.js静态博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
+
+# Hexo 安装
+
+我的 Hexo 安装版本为：vs_3.4.3；Node.js 版本为：vs_8.9.3。安装 Hexo 之前请先确保 Git 及 Node.js 安装成功，接下来只需要使用 NPM 即可完成 Hexo 的安装。在计算机的某个盘符下（其他盘符/文件夹下亦可）新建文件夹 blog，进入到文件夹 blog 中使用 Git Bash （在任意位置单击右键，选择 “Git Bash Here” 即可）进行操作如下：
+
+``` bash
+$ npm install -g hexo-cli
+```
+Hexo 更新至最新版本，命令如下：
+
+$ npm update hexo -g
+# Hexo 初始化
+
+安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。
+``` bash
+$ hexo init blog
+$ cd blog
+$ npm install
+```
+输入以下命令生成静态页面：
+
+``` bash
+$ hexo generate
+```
+新建完成后，指定文件夹的目录如下：
+
+``` bash
+.
+├── _config.yml 网站的配置信息，您可以在此配置大部分的参数
+├── package.json 应用程序的信息
+├── scaffolds 模板文件夹
+├── source 资源文件夹，存放用户资源
+|   ├── _drafts
+|   └── _posts
+└── themes 网站主题文件夹
+```
+接着输入命令启动服务：
+
+```bash
+$ hexo server
+```
+打印信息如下表示服务启动成功：
+
+``` bash
+$ hexo server
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
+```
+
+然后在浏览器中访问：http://localhost:4000/，注意这里不能直接使用快捷键 Ctrl+C 去复制链接，需要单击鼠标右键选择复制或手动输入。注意看打印信息 Press Ctrl+C to stop. 所以你如果随手 Ctrl+C，服务就停了，也就无法访问了。如果操作无误且正确启动服务后仍无法访问，那么请您继续往下看：（四、常见问题及解决方法）
+
+# Hexo 配置（_config.yml 文件）
+
+
+``` bash
+title              网站标题
+subtitle           网站副标题
+description        网站描述
+author             您的名字
+language           网站使用的语言
+timezone           网站时区。Hexo 默认使用您电脑的时区时区列表。比如说：America/New_York, Japan, 和 UTC 。
+```
+其中，description主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。author参数用于主题显示文章的作者。
+复制代码
+其他相关详细配置信息请参考：Hexo 配置
+
+# Hexo 部署至 Github
+
+首先需要在 Github 中新建仓库 new repository 为：【您的 Github 名称.github.io】，如：DestinyV.github.io。然后修改 _config.yml 配置文件 ，打开文件后找到 deploy: 修改如下：（注意冒号后面有一个空格： ）
+
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+``` bash
+deploy:    //记得要空格！！！
+  type: git
+  repo: https://github.com/DestinyV/Blog.github.io.git
+  .io.git
+  branch: master
+  message:
+  ```
+
+编辑完成后进行保存，接着安装 hexo-deployer-git，命令如下：
+
+``` bash
+$ npm install hexo-deployer-git --save
+```
+等待安装完成以后，执行如下配置命令：
+
+
+``` bash
+$ hexo deploy
+```
+重新部署一下，命令如下：
+
+``` bash
+$ hexo clean
+$ hexo generate
+$ hexo deploy
+```
+在正常部署完成的情况下，打开浏览器输入：
+【https://您的 Github 名称/github.io】进行访问，例如：[DestinyV](https://DestinyV.github.io)。此时你会发现没有网站主题，只有文字没样式并不好看，于是乎，选择一个自己喜欢的 Hexo主题：
+
+
+四、常见问题及解决方法
+
+1. http://localhost:4000/ 无法访问？
+
+出现该问题的可能原因是端口号4000被占用，将 index.js 文件（若找不到该index.js文件，请参考我的另一篇博客：Everything 工具使用）中的端口号修改为：4001或者其他，重启服务后再次访问即可。
+
+``` bash
+hexo.config.server = assign({
+  port: 4001,
+  log: false,
+  ip: '0.0.0.0',
+  compress: false,
+  header: true
+}, hexo.config.server);
+```
+
+2. 博客出现中文乱码问题？
+
+若出现该问题请使用编辑器 Notepad++ 或 Sublime Text2/3 编辑 _config.yml 文件，设置编辑器的编码为 UTF-8 后进行保存即可。
+
+
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Hexo 网站主标题
+subtitle: 网站二级标题/副标题
+description: 网站描述
+author: 网站作者
+language: 网站使用语言
+timezone: 网站时区，Hexo 默认使用您电脑的时区
+3. 博客访问中出现404错误？
+
+若出现该问题，可能是在你修改 _config.yml 文件中 Hexo 主题后导致，比如将 theme: landscape 换成 theme: Next。
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: landscape
+4. 修改个人博客根目录下的配置文件或主题下的配制文件 _config.yml，刷新页面后修改的地方没有生效？
+
+首先进入到主题文件夹的目录下（如：../blog/themes/yilia/），执行命令：
+
+$ git pull
+然后返回到文件夹 ../blog 下，重新部署项目执行命令如下：
+``` bash
+$ hexo clean
+$ hexo g
+$ hexo d
+```
